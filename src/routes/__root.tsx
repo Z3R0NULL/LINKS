@@ -88,6 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
         rel: "preload",
         href: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/eefe8903-79f5-459c-9ae9-dcb210b1e70a/Fipps-Regular-1770396520804.otf",
