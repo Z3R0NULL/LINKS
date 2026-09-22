@@ -88,7 +88,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "64x64",
+        href: "/favicon.png?v=2",
+      },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=2" },
+      { rel: "shortcut icon", href: "/favicon.ico?v=2" },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png?v=2",
+      },
       {
         rel: "preload",
         href: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/eefe8903-79f5-459c-9ae9-dcb210b1e70a/Fipps-Regular-1770396520804.otf",

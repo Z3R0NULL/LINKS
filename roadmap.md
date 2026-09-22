@@ -4,4 +4,5 @@
 - [x] Convertir la portada en una página Link in Bio.
 - [x] Retirar las secciones inferiores del portfolio.
 - [x] Añadir enlaces sociales provisionales en formato grande.
-- [ ] Sustituir las direcciones provisionales cuando el usuario facilite los enlaces reales. Bloqueado: faltan URLs.
+- [x] Sustituir las direcciones provisionales por los enlaces oficiales.
+- [x] Restaurar los iconos orgánicos animados del fondo.
