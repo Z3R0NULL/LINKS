@@ -145,9 +145,18 @@ function LinkInBio() {
             <span className="animate-terminal-blink font-bold text-destructive">_</span>
           </div>
 
-          <h1 className="font-pixel animate-entry delay-200 pb-3 text-4xl leading-tight sm:text-5xl">
-            <span className="text-destructive">Z3RØ</span>
-            <span className="text-muted-foreground">NULL</span>
+          <h1
+            aria-label="Z3RØNULL"
+            className="font-pixel animate-entry delay-200 pb-3 text-4xl leading-tight sm:text-5xl"
+          >
+            <span aria-hidden="true" className="brand-letter brand-title">Z</span>
+            <span aria-hidden="true" className="brand-letter brand-title">3</span>
+            <span aria-hidden="true" className="brand-letter brand-title">R</span>
+            <span aria-hidden="true" className="brand-letter brand-title">Ø</span>
+            <span aria-hidden="true" className="brand-letter brand-name-muted">N</span>
+            <span aria-hidden="true" className="brand-letter brand-name-muted">U</span>
+            <span aria-hidden="true" className="brand-letter brand-name-muted">L</span>
+            <span aria-hidden="true" className="brand-letter brand-name-muted">L</span>
           </h1>
 
           <p className="animate-entry delay-300 mt-6 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">

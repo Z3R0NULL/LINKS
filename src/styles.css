@@ -182,6 +182,20 @@ html {
   --popover: #111111;
   --popover-foreground: #fafafa;
   --link-glow: rgba(220, 38, 38, 0.2);
+  --brand-title: #e20303;
+  --brand-name-muted: #737373;
+}
+
+.brand-title {
+  color: var(--brand-title);
+}
+
+.brand-name-muted {
+  color: var(--brand-name-muted);
+}
+
+.brand-letter + .brand-letter {
+  margin-left: -1px;
 }
 
 /* Estilos base */
