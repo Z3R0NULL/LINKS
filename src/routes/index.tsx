@@ -1,11 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
+  Binary,
+  Braces,
+  Bug,
+  Code2,
+  Cpu,
+  Database,
   Facebook,
   Github,
   Globe,
   Instagram,
+  LockKeyhole,
+  Network,
+  Radio,
+  ShieldCheck,
   Terminal,
+  Wifi,
   Youtube,
 } from "lucide-react";
 import { FaDiscord } from "react-icons/fa6";
@@ -60,6 +71,23 @@ const links = [
   },
 ];
 
+const backgroundIcons = [
+  { Icon: Code2, position: "left-[7%] top-[9%]", size: "h-14 w-14", animation: "anim-icon-drift", duration: "13s" },
+  { Icon: ShieldCheck, position: "right-[8%] top-[15%]", size: "h-16 w-16", animation: "anim-icon-breathe", duration: "11s" },
+  { Icon: Cpu, position: "left-[13%] top-[38%]", size: "h-12 w-12", animation: "anim-icon-morph", duration: "15s" },
+  { Icon: Braces, position: "right-[12%] top-[43%]", size: "h-14 w-14", animation: "anim-icon-sway", duration: "14s" },
+  { Icon: Terminal, position: "left-[6%] top-[69%]", size: "h-16 w-16", animation: "anim-icon-wander", duration: "18s" },
+  { Icon: Radio, position: "right-[7%] top-[74%]", size: "h-12 w-12", animation: "anim-icon-levitate", duration: "12s" },
+  { Icon: Github, position: "left-[20%] top-[88%]", size: "h-10 w-10", animation: "anim-icon-breathe", duration: "16s" },
+  { Icon: Globe, position: "right-[20%] top-[91%]", size: "h-11 w-11", animation: "anim-icon-drift", duration: "17s" },
+  { Icon: Binary, position: "left-[24%] top-[22%]", size: "h-10 w-10", animation: "anim-icon-flicker", duration: "10s" },
+  { Icon: Database, position: "right-[24%] top-[29%]", size: "h-11 w-11", animation: "anim-icon-levitate", duration: "15s" },
+  { Icon: Bug, position: "left-[25%] top-[55%]", size: "h-10 w-10", animation: "anim-icon-morph", duration: "17s" },
+  { Icon: LockKeyhole, position: "right-[25%] top-[61%]", size: "h-11 w-11", animation: "anim-icon-emerge", duration: "13s" },
+  { Icon: Network, position: "left-[10%] top-[81%]", size: "h-12 w-12", animation: "anim-icon-sway", duration: "19s" },
+  { Icon: Wifi, position: "right-[10%] top-[84%]", size: "h-10 w-10", animation: "anim-icon-breathe", duration: "14s" },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -86,6 +114,17 @@ function LinkInBio() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background px-5 py-10 text-foreground sm:px-8 sm:py-14">
       <CyberGrid className="opacity-50" />
+
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        {backgroundIcons.map(({ Icon, position, size, animation, duration }, index) => (
+          <Icon
+            key={`${position}-${index}`}
+            className={`absolute ${position} ${size} ${animation} text-destructive/[0.11]`}
+            style={{ animationDuration: duration, animationDelay: `${index * -1.7}s` }}
+            strokeWidth={1.25}
+          />
+        ))}
+      </div>
 
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-destructive to-transparent opacity-70" />
 
